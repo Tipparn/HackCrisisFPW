@@ -7,12 +7,12 @@ import java.net.*;
 
 public class Main{
 
-  countryStat t = new countryStat("fi");
 
 
   public static void main(String[] args){
-
-
+  countryStat t = new countryStat("fi");
+t.addinfo("20","11","2001","2","1");
+System.out.println(t.date);
 	//Inputsteam in = new URL("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv").openStream();
 	//Files.copy(in, Paths.get(data.txt), StandardCopyOption.REPLACE_EXISTING);
 
