@@ -5,21 +5,20 @@ import java.io.File;
 public class Main{
 
 
-  public static void main(string[] blabla){
-    lefiih = readFile();
+  public static void main(String[] blabla){
 
 
 
   }
 
-  public static ArrayList<> readFile(File file){
+  public static ArrayList<countryStat> readFile(File file){
     Scanner sc = new Scanner(file);
     ArrayList<countryStat> all = new ArrayList<countryStat>();
 
-    while(sc.hasNext){
+    while(sc.hasNext()){
 
     }
-    return
+    return all;
   }
 
 }
