@@ -17,6 +17,8 @@ public class countryStat{
 	total_death = 0;// start the value from 0
 	total_cases = 0;
   	}
+	//kanske ska göra dett på annat sätt??
+	//använda setters();??
   	public void addinfo(String day, String month,String year,String new_case, String deaths ){
   		date.add(new Date(Integer.parseInt(year),Integer.parseInt(month),Integer.parseInt(day)));
   		new_cases.add(Integer.parseInt(new_case));
