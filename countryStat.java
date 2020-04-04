@@ -10,5 +10,5 @@ public class countryStat{
     	countryName = countryN;
   	}
   	public void addinfo(String day, String month,String year,String new_case, String deaths ){
-
+    }
 }
