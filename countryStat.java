@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Date;
 public class countryStat{
-<<<<<<< HEAD
  	String countryName;
 	ArrayList<Date> date=new ArrayList<Date>();
 	ArrayList<Integer> deaths=new ArrayList<Integer>();
@@ -12,7 +11,6 @@ public class countryStat{
   	}
   	public void addinfo(String day, String month,String year,String new_case, String deaths ){
   		date.add(
-=======
   String countryName
   ArrayList<int> dates;
   int[] deaths;

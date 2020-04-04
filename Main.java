@@ -15,9 +15,9 @@ public class Main{
 
   }
 
-  public static ArrayList<String> readFile(File file){
+  public static ArrayList<countryStat> readFile(File file){
 
-    ArrayList<String> all = new ArrayList<String>();
+    ArrayList<countryStat> all = new ArrayList<countryStat>();
     try{
     Scanner sc = new Scanner(file);
     while(sc.hasNext()){
