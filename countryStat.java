@@ -1,6 +1,6 @@
 public class countryStat{
   String countryName
-  int[] dates;
+  ArrayList<int> dates;
   int[] deaths;
   int[] recoverd;
   public countryStat(String countryN){
