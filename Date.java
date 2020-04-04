@@ -1,3 +1,4 @@
+//spara kod finns redan ju behöver inte skapa något nytt https://docs.oracle.com/javase/8/docs/api/java/util/Date.html
 public class Date{
   int year;
   int month;
