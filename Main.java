@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.net.*;
 
 public class Main{
 
@@ -14,13 +15,17 @@ public class Main{
 
   }
 
-  public static ArrayList<countryStat> readFile(File file){
-    Scanner sc = new Scanner(file);
-    ArrayList<countryStat> all = new ArrayList<countryStat>();
+  public static ArrayList<String> readFile(File file){
 
+    ArrayList<String> all = new ArrayList<String>();
+    try{
+    Scanner sc = new Scanner(file);
     while(sc.hasNext()){
 
     }
+    }catch (Exception e) {
+    System.out.println("fel");
+  }
     return all;
   }
 
