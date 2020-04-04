@@ -13,4 +13,12 @@ public class countryStat{
   		new_cases.add(Integer.parseInt(new_case));
   		new_deaths.add(Integer.parseInt(deaths));
   	}
+
+    public String toString(){
+      String s = this.countryName + "\n";
+      for(int i = 0;i< date.length();i++){
+        s = s + date.get(i); + "\t" + new_cases.get(i) + "\t" + new_deaths.get(i) + "\n";
+      }
+      return s;
+    }
 }
