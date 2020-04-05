@@ -10,10 +10,18 @@ public class Main{
 
 
   public static void main(String[] args){
+<<<<<<< HEAD
   Display d = new Display();
 
 	//Inputsteam in = new URL("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv").openStream();
 	//Files.copy(in, Paths.get(data.txt), StandardCopyOption.REPLACE_EXISTING);
+=======
+    try{InputStream in = new URL("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv").openStream();
+  //Files.copy(in, Paths.get("/data.txt"), StandardCopyOption.REPLACE_EXISTING);
+  }
+	catch(Exception e){System.out.println(e);}
+
+>>>>>>> 4996fa3f04800f62eeec2fc9756fe2455fbd2bbc
 
   ArrayList<countryStat> data = readFile();
 
