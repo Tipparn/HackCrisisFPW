@@ -10,6 +10,8 @@ public class Main{
 
 
   public static void main(String[] args){
+  Display d = new Display();
+
 	//Inputsteam in = new URL("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv").openStream();
 	//Files.copy(in, Paths.get(data.txt), StandardCopyOption.REPLACE_EXISTING);
 
@@ -30,23 +32,25 @@ public class Main{
     countryStat cs = new countryStat("blabla");
     while(sc.hasNext()){
 
-      if(Name.equals(cs.countryName)){
+      if(!Name.equals(cs.countryName)){
         all.add(cs);
         cs = new countryStat("blabla");
       }
-
       String s = sc.nextLine();
       String t = "";
       for(int i = 11; i<s.length();i++){
         t = t + s.charAt(i);
       }
-
       String[] array = t.split(",");
-
       Name= array[5];
-      System.out.println(""+array[0]  +array[1] +array[2]  +array[3]  +array[4]);
-      int[]
-      cs.addinfo(array[0],array[1],array[2],array[3],array[4]); // <-- något konstigt
+      int[] intarray = new int[5];
+      for(int i = 0; i<5; i++){
+        intarray[i] = Integer.parseInt(array[i]);
+      }
+      System.out.println(""+intarray[0]  +intarray[1] +intarray[2]  +intarray[3]  +intarray[4]);
+
+      System.out.println(456);
+      cs.addinfo(intarray[0],intarray[1],intarray[2],intarray[3],intarray[4]); // <-- något konstigt
       System.out.println(2);
 
     }
