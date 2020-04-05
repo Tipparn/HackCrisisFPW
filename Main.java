@@ -1,8 +1,7 @@
 import java.util.Scanner;  // Import the Scanner class
 import java.util.ArrayList;
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.StandardCopyOption;
+import java.nio.file.*;
 import java.net.*;
 
 public class Main{
@@ -10,8 +9,9 @@ public class Main{
 
 
   public static void main(String[] args){
-	Inputsteam in = new URL("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv").openStream();
-	Files.copy(in, Paths.get(data.txt), StandardCopyOption.REPLACE_EXISTING);
+    try{InputStream in = new URL("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv").openStream();
+  Files.copy(in, Paths.get("/data.txt"), StandardCopyOption.REPLACE_EXISTING);}
+	catch(Exception e){System.out.println("error");}
 
   ArrayList<countryStat> data = readFile();
 
