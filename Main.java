@@ -10,8 +10,9 @@ public class Main{
 
   public static void main(String[] args){
     try{InputStream in = new URL("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv").openStream();
-  Files.copy(in, Paths.get("/data.txt"), StandardCopyOption.REPLACE_EXISTING);}
-	catch(Exception e){System.out.println("error");}
+  //Files.copy(in, Paths.get("/data.txt"), StandardCopyOption.REPLACE_EXISTING);
+  }
+	catch(Exception e){System.out.println(e);}
 
   ArrayList<countryStat> data = readFile();
 
