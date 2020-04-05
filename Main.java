@@ -10,8 +10,8 @@ public class Main{
 
 
   public static void main(String[] args){
-	Inputsteam in = new URL("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv").openStream();
-	Files.copy(in, Paths.get(data.txt), StandardCopyOption.REPLACE_EXISTING);
+	//Inputsteam in = new URL("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv").openStream();
+	//Files.copy(in, Paths.get(data.txt), StandardCopyOption.REPLACE_EXISTING);
 
   ArrayList<countryStat> data = readFile();
 
@@ -25,7 +25,7 @@ public class Main{
     try{
     File file = new File("data.txt");
     Scanner sc = new Scanner(file);
-
+    sc.nextLine();
     String Name = "";
     countryStat cs = new countryStat("blabla");
     while(sc.hasNext()){
@@ -44,11 +44,14 @@ public class Main{
       String[] array = t.split(",");
 
       Name= array[5];
-
+      System.out.println(""+array[0]  +array[1] +array[2]  +array[3]  +array[4]);
+      int[]
       cs.addinfo(array[0],array[1],array[2],array[3],array[4]); // <-- något konstigt
+      System.out.println(2);
+
     }
     }catch (Exception e) {
-    System.out.println("fel");
+    System.out.println("fel:   " + e);
   }
     System.out.println(all);
     return all;

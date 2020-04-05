@@ -13,17 +13,18 @@ public class countryStat{
 
   	public countryStat(String countryN){
     	countryName = countryN;
-	
+
   	}
 	//kanske ska göra dett på annat sätt??
 	//använda setters();??
   	public void addinfo(String day, String month,String year,String new_case, String deaths ){
-  		date.add(new Date(Integer.parseInt(year),Integer.parseInt(month),Integer.parseInt(day)));
-  		new_cases.add(Integer.parseInt(new_case));
-  		new_deaths.add(Integer.parseInt(deaths));
-  		total_cases.add(new_cases.get(new_cases.size())+Integer.parseInt(new_case));
-  		total_death.add(new_deaths.get(new_deaths.size())+Integer.parseInt(deaths));
-  	}
+
+      date.add(new Date(Integer.parseInt(year),Integer.parseInt(month),Integer.parseInt(day)));
+      new_cases.add(Integer.parseInt(new_case));
+      new_deaths.add(Integer.parseInt(deaths));
+      total_cases.add(new_cases.get(new_cases.size())+Integer.parseInt(new_case));
+      total_death.add(new_deaths.get(new_deaths.size())+Integer.parseInt(deaths));
+    }
 
     public String toString(){
       String s = this.countryName + "\n";
