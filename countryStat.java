@@ -22,8 +22,8 @@ public class countryStat{
       date.add(new Date(Integer.parseInt(year),Integer.parseInt(month),Integer.parseInt(day)));
       new_cases.add(Integer.parseInt(new_case));
       new_deaths.add(Integer.parseInt(deaths));
-      total_cases.add(new_cases.get(new_cases.size())+Integer.parseInt(new_case));
-      total_death.add(new_deaths.get(new_deaths.size())+Integer.parseInt(deaths));
+      total_cases.add(new_cases.get(new_cases.size()-1)+Integer.parseInt(new_case));
+      total_death.add(new_deaths.get(new_deaths.size()-1)+Integer.parseInt(deaths));
     }
 
     public String toString(){
