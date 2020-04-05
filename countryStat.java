@@ -17,13 +17,15 @@ public class countryStat{
   	}
 	//kanske ska göra dett på annat sätt??
 	//använda setters();??
-  	public void addinfo(String day, String month,String year,String new_case, String deaths ){
+  	public void addinfo(int day, int month,int year,int new_case, int deaths ){
 
-      date.add(new Date(Integer.parseInt(year),Integer.parseInt(month),Integer.parseInt(day)));
-      new_cases.add(Integer.parseInt(new_case));
-      new_deaths.add(Integer.parseInt(deaths));
-      total_cases.add(new_cases.get(new_cases.size()-1)+Integer.parseInt(new_case));
-      total_death.add(new_deaths.get(new_deaths.size()-1)+Integer.parseInt(deaths));
+
+      date.add(new Date(year,month,day));
+      new_cases.add(new_case);
+      new_deaths.add(deaths);
+      total_cases.add(new_cases.get(new_cases.size())+new_case);
+      total_death.add(new_deaths.get(new_deaths.size())+deaths);
+
     }
 
     public String toString(){
